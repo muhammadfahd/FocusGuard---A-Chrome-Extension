@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusGuard - Stay Focused</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.7;
+            margin-bottom: 40px;
+        }
+
+        .stats-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #667eea;
+            margin: 10px 0;
+        }
+
+        .stat-label {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+
+        .quote {
+            opacity: 0.6;
+            margin-top: 30px;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .time-of-day {
+            font-size: 24px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 36px;
+            }
+            .stat-value {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🎯</div>
+        <h1>FocusGuard</h1>
+        <p class="subtitle">Your Personal Focus Companion</p>
+        
+        <div class="time-of-day" id="greeting"></div>
+
+        <div class="stats-container">
+            <div class="stat">
+                <div class="stat-label">Total Browsing Today</div>
+                <div class="stat-value" id="totalTime">0 min</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-label">Remaining Distraction Time</div>
+                <div class="stat-value" id="remainingTime">0 min</div>
+            </div>
+        </div>
+
+        <p class="quote">
+            "Small progress every day leads to big success. Stay focused, stay determined."
+        </p>
+    </div>
+
+    <script src="focus.js"></script>
+</body>
+</html>

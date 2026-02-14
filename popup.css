@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 360px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 16px;
+    text-align: center;
+}
+
+.header h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Focus Mode Section */
+.focus-mode-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.focus-mode-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.focus-mode-icon {
+    font-size: 32px;
+}
+
+.focus-mode-title {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.focus-mode-desc {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 26px;
+    display: inline-block;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 26px;
+    transition: 0.4s;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .toggle-slider {
+    background-color: #10b981;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+.focus-mode-section.active {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.9; }
+}
+
+.tabs {
+    display: flex;
+    background: white;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.tabBtn {
+    flex: 1;
+    padding: 12px 8px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    color: #64748b;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.tabBtn:hover {
+    background: #f1f5f9;
+    color: #667eea;
+}
+
+.tabBtn.active {
+    color: #667eea;
+    border-bottom-color: #667eea;
+}
+
+.tabContent {
+    padding: 16px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Stats Tab */
+.category-filter {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.filter-btn {
+    padding: 6px 12px;
+    border: 2px solid #e2e8f0;
+    background: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: nowrap;
+    color: #64748b;
+}
+
+.filter-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.filter-btn.active {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+}
+
+#stats {
+    margin-bottom: 16px;
+}
+
+#stats p {
+    background: white;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    font-size: 13px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#stats strong {
+    color: #667eea;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.category-social {
+    background: #fce7f3;
+    color: #ec4899;
+}
+
+.category-entertainment {
+    background: #dbeafe;
+    color: #3b82f6;
+}
+
+.category-educational {
+    background: #d1fae5;
+    color: #10b981;
+}
+
+.category-news {
+    background: #fef3c7;
+    color: #f59e0b;
+}
+
+.category-other {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+#usageChart {
+    margin-top: 16px;
+    max-height: 200px;
+}
+
+/* Timer Tab */
+h3 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #1e293b;
+    font-size: 18px;
+}
+
+#mode {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+}
+
+#timerDisplay {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin: 24px 0;
+    color: #667eea;
+    font-family: 'Courier New', monospace;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.timer-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.timer-btn:not(.secondary) {
+    background: #667eea;
+    color: white;
+}
+
+.timer-btn:not(.secondary):hover {
+    background: #5568d3;
+    transform: translateY(-1px);
+}
+
+.timer-btn.secondary {
+    background: #e2e8f0;
+    color: #64748b;
+}
+
+.timer-btn.secondary:hover {
+    background: #cbd5e1;
+}
+
+/* Options Tab */
+.help-text {
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+button#setLimit {
+    width: 100%;
+    padding: 12px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button#setLimit:hover {
+    background: #5568d3;
+    transform: translateY(-1px);
+}
+
+/* Scrollbar styling */
+.tabContent::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tabContent::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.tabContent::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.tabContent::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

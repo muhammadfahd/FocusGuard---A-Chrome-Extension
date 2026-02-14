@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Limit Reached - FocusGuard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 500px;
+            padding: 40px;
+        }
+
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .quote {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-style: italic;
+            font-size: 16px;
+        }
+
+        .btn {
+            background: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon" id="blockIcon">⏰</div>
+        <h1 id="blockTitle">Time Limit Reached</h1>
+        <p id="blockMessage">You've reached your time limit for this website. Take a break and return to your studies!</p>
+        <div class="quote">
+            "Focus is not about saying yes to the thing you've got to focus on. It's about saying no to the hundred other good ideas."
+        </div>
+        <a href="chrome://newtab" class="btn">Back to Focus Dashboard</a>
+    </div>
+    
+    <script>
+        // Get reason from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const reason = urlParams.get('reason');
+        
+        if (reason === 'focus') {
+            document.getElementById('blockIcon').textContent = '🔥';
+            document.getElementById('blockTitle').textContent = 'Focus Mode Active';
+            document.getElementById('blockMessage').textContent = 'Focus Mode is blocking this site. Educational sites are still accessible. Stay strong!';
+        }
+    </script>
+</body>
+</html>

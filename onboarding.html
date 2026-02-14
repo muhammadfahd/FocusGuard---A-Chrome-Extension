@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to FocusGuard!</title>
+    <link rel="stylesheet" href="onboarding.css">
+</head>
+<body>
+    <div class="onboarding-container">
+        <!-- Step 1: Welcome -->
+        <div class="step active" id="step1">
+            <div class="logo">🎯</div>
+            <h1>Welcome to FocusGuard!</h1>
+            <p class="subtitle">Your personal study companion to beat distractions</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <div class="feature-title">Time Tracking</div>
+                    <div class="feature-desc">See where your time goes</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚫</div>
+                    <div class="feature-title">Site Blocking</div>
+                    <div class="feature-desc">Limit distracting websites</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍅</div>
+                    <div class="feature-title">Pomodoro Timer</div>
+                    <div class="feature-desc">Study in focused sessions</div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" id="nextBtn1">Get Started →</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Choose Your Profile -->
+        <div class="step" id="step2">
+            <h1>What's Your Biggest Distraction?</h1>
+            <p class="subtitle">We'll help you set up the right limits</p>
+
+            <div class="preset-grid">
+                <div class="preset-card" data-preset="social">
+                    <div class="preset-icon">📱</div>
+                    <div class="preset-info">
+                        <div class="preset-title">Social Media Addict</div>
+                        <div class="preset-desc">Can't stop scrolling through feeds</div>
+                        <div class="preset-sites">Instagram, Facebook, Twitter, TikTok</div>
+                    </div>
+                </div>
+
+                <div class="preset-card" data-preset="video">
+                    <div class="preset-icon">📺</div>
+                    <div class="preset-info">
+                        <div class="preset-title">YouTube Binger</div>
+                        <div class="preset-desc">"Just one more video..." syndrome</div>
+                        <div class="preset-sites">YouTube, Twitch, Netflix</div>
+                    </div>
+                </div>
+
+                <div class="preset-card" data-preset="gaming">
+                    <div class="preset-icon">🎮</div>
+                    <div class="preset-info">
+                        <div class="preset-title">Gaming Student</div>
+                        <div class="preset-desc">One more match turns into 10</div>
+                        <div class="preset-sites">Reddit, Discord, Steam, gaming sites</div>
+                    </div>
+                </div>
+
+                <div class="preset-card" data-preset="custom">
+                    <div class="preset-icon">⚙️</div>
+                    <div class="preset-info">
+                        <div class="preset-title">Custom Setup</div>
+                        <div class="preset-desc">I'll set my own limits later</div>
+                        <div class="preset-sites">Skip preset configuration</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-secondary" id="backBtn2">← Back</button>
+                <button class="btn btn-primary" id="nextBtn2">Continue →</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Quick Tips -->
+        <div class="step" id="step3">
+            <h1>Pro Tips to Stay Focused</h1>
+            <p class="subtitle">Make the most out of FocusGuard</p>
+
+            <div class="tips">
+                <div class="tips-title">🎯 Use Focus Mode</div>
+                <div class="tips-list">Click the Focus Mode button to block ALL distractions instantly when you need to study.</div>
+            </div>
+
+            <div class="tips">
+                <div class="tips-title">🍅 Try Pomodoro Technique</div>
+                <div class="tips-list">Study for 25 minutes, take a 5-minute break. It's scientifically proven to improve focus!</div>
+            </div>
+
+            <div class="tips">
+                <div class="tips-title">📊 Check Your Stats</div>
+                <div class="tips-list">Open a new tab to see your Focus Dashboard with daily statistics and insights.</div>
+            </div>
+
+            <div class="tips">
+                <div class="tips-title">⚙️ Set Realistic Limits</div>
+                <div class="tips-list">Start with 30-60 minutes per day for distracting sites, then gradually reduce.</div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-secondary" id="backBtn3">← Back</button>
+                <button class="btn btn-primary" id="finishBtn">Start Using FocusGuard! 🚀</button>
+            </div>
+        </div>
+
+        <!-- Progress Dots -->
+        <div class="progress-dots">
+            <div class="dot active" data-step="1"></div>
+            <div class="dot" data-step="2"></div>
+            <div class="dot" data-step="3"></div>
+        </div>
+    </div>
+
+    <script src="onboarding.js"></script>
+</body>
+</html>
